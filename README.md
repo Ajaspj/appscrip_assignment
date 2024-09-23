@@ -21,5 +21,7 @@ The User Details App is a Flutter application that fetches user data from an API
    ```bash
    git clone https://github.com/yourusername/user_details_app.git
    cd user_details_app
-2. flutter pub get
-3.flutter run
+2.```bash
+flutter pub get
+3.```bash
+flutter run
