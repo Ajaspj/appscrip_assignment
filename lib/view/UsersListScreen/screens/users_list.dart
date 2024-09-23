@@ -2,7 +2,7 @@ import 'package:appscrip_assignment/view/UsersListScreen/widgets/custom_card.dar
 import 'package:appscrip_assignment/view/UsersListScreen/widgets/custom_searchbar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:appscrip_assignment/controller/usercontroller.dart';
+import 'package:appscrip_assignment/controller/user_controller.dart';
 import 'package:appscrip_assignment/view/UsersDetailsScreen/screens/userdetail_screen.dart';
 
 class UserListScreen extends StatefulWidget {
@@ -18,12 +18,12 @@ class UserListScreenState extends State<UserListScreen> {
   @override
   void initState() {
     super.initState();
-    Provider.of<UserProvider>(context, listen: false).fetchUsers();
+    Provider.of<UserController>(context, listen: false).fetchUsers();
   }
 
   @override
   Widget build(BuildContext context) {
-    final userProvider = Provider.of<UserProvider>(context);
+    final userProvider = Provider.of<UserController>(context);
 
     return Scaffold(
       appBar: AppBar(

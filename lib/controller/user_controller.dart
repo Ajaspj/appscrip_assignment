@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class UserProvider with ChangeNotifier {
+class UserController with ChangeNotifier {
   bool _isLoading = false;
   List<dynamic> _users = [];
   List<dynamic> _filteredUsers = [];

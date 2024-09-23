@@ -19,13 +19,13 @@ class ButtonRow extends StatelessWidget {
         IconButton(
           icon: const Icon(Icons.print, color: Colors.indigo),
           onPressed: () async {
-            await _printUserDetails(context);
+            await printUserDetails(context);
           },
         ),
         IconButton(
           icon: const Icon(Icons.save, color: Colors.indigo),
           onPressed: () async {
-            await _saveUserDetails(context);
+            await saveUserDetails(context);
           },
         ),
         IconButton(
@@ -39,7 +39,7 @@ class ButtonRow extends StatelessWidget {
     );
   }
 
-  Future<void> _printUserDetails(BuildContext context) async {
+  Future<void> printUserDetails(BuildContext context) async {
     await Printing.layoutPdf(
       onLayout: (PdfPageFormat format) async {
         final pdf = pw.Document();
@@ -47,7 +47,7 @@ class ButtonRow extends StatelessWidget {
         pdf.addPage(
           pw.Page(
             build: (pw.Context context) {
-              return _buildPdfContent();
+              return buildPdfContent();
             },
           ),
         );
@@ -60,13 +60,13 @@ class ButtonRow extends StatelessWidget {
     );
   }
 
-  Future<void> _saveUserDetails(BuildContext context) async {
+  Future<void> saveUserDetails(BuildContext context) async {
     final pdf = pw.Document();
 
     pdf.addPage(
       pw.Page(
         build: (pw.Context context) {
-          return _buildPdfContent();
+          return buildPdfContent();
         },
       ),
     );
@@ -88,7 +88,7 @@ class ButtonRow extends StatelessWidget {
     }
   }
 
-  pw.Widget _buildPdfContent() {
+  pw.Widget buildPdfContent() {
     return pw.Column(
       crossAxisAlignment: pw.CrossAxisAlignment.start,
       children: [
