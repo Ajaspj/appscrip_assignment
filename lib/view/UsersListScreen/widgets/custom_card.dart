@@ -130,7 +130,6 @@ class UserCardWidget extends StatelessWidget {
   }
 
   Future<void> _saveUserDetails(BuildContext context) async {
-    // Accept context as parameter
     final pdf = pw.Document();
 
     pdf.addPage(
