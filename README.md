@@ -1,16 +1,29 @@
-# appscrip_assignment
+# Project Title: User Details App
 
-A new Flutter project.
+## Description
+The User Details App is a Flutter application that fetches user data from an API and displays it in a visually appealing manner. The app allows users to view details such as name, email, and other information about the users. Additionally, it provides functionality for printing, saving, and sharing user details.
 
-## Getting Started
+## Features
+- Fetch user data from an external API.
+- Display user details in a user-friendly interface.
+- Print user details as a PDF document.
+- Save user details as a PDF file in the device's storage.
+- Share user details via various sharing options.
 
-This project is a starting point for a Flutter application.
+## Instructions to Run the App
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+- Ensure you have Flutter installed on your machine. You can check the installation guide [here](https://flutter.dev/docs/get-started/install).
+- Ensure you have an IDE set up (e.g., Android Studio, VSCode).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Steps
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/user_details_app.git
+   cd user_details_app
+   flutter pub get
+   flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
